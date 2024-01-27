@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button type="button" id="b1" name="button">Click Me</button>
+    <script>
+
+      // Like CLasses but in runtime will be as functions
+
+      // class Rect
+      // {
+      //   constructor(height, width)
+      //   {
+      //     this.height = height;
+      //     this.width = width;
+      //   }
+      //
+      //   getArea() // this.getArea = function () { return(this.height *  this.width); }
+      //   {
+      //     return(this.height *  this.width);
+      //   }
+      //
+      // }
+      //
+      // var p = new Rect(5, 5);
+      //
+      // console.log(p.getArea());
+
+      // var Rect = class
+      // {
+      //   constructor(height, width)
+      //   {
+      //     this.height = height;
+      //     this.width = width;
+      //   }
+      //
+      //   getArea() // this.getArea = function () { return(this.height *  this.width); }
+      //   {
+      //     return(this.height *  this.width);
+      //   }
+      //
+      // }
+      //
+      // var p = new Rect(5, 5);
+      //
+      // console.log(p.getArea());
+
+      var Rectangle = class
+      {
+        constructor(height, width)
+        {
+          this.height = height;
+          this.width = width;
+        }
+
+        get rectWidth()
+        {
+          return this.width;
+        }
+
+        set rectWidth(w)
+        {
+          this.width = w;
+        }
+
+        getArea() // this.getArea = function () { return(this.height *  this.width); }
+        {
+          return(this.height *  this.width);
+        }
+
+      }
+
+      const square = new Rectangle(20,20);
+      square.rectWidth = 15;
+      console.log(square.width + "           " + square.rectWidth);
+      console.log(square.getArea());
+
+      class Point{
+        constructor(x, y)
+        {
+          this.x = x;
+          this.y = y;
+        }
+
+        // static method
+        static distance(a, b){
+          let dx = a.x - b.x;
+          let y = a.y - b.y;
+          return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        // Static field
+        static z = 3;
+
+
+
+      }
+
+
+
+      class Animal{
+        constructor(name){
+          this.name = name;
+        }
+        speak(){
+          console.log(this.name + ' , I am an Animal.');
+        }
+      }
+
+      class Dog extends Animal{
+        speak(){
+          console.log(this.name + ' , I am a Dog.');
+        }
+      }
+
+      class Lion extends Animal{
+        speak(){
+          super.speak()
+          console.log('of type lion.');
+        }
+      }
+
+      var l = new Lion('lio');
+      l.speak();
+
+
+      class Tiger extends Animal{
+        constructor(name, age){
+          super(name);
+          this.age = age;
+        }
+        speak(){
+          super.speak()
+          console.log(this.name + ' , I am a Tiger, and my age is ' + this.age);
+        }
+      }
+
+      var t = new Tiger("Tig", 20);
+      t.speak();
+
+
+
+      class myClass{
+        x = 19; // Public Property
+        #b = 2; // Private Property
+        static #c = 3; // private and Static
+
+        incB(){
+          this.#b++;
+        }
+      }
+
+      const m = new myClass();
+      m.incB(); // run Ok
+
+      /* m.#b = 0; // error */
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

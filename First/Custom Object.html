@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button type="button" id="b1" name="button">Click Me</button>
+    <script>
+      // Every function have array named arguments
+
+
+
+      // Custom Object (Object Initializer in C#)
+      // Anonymmous object
+      // var person = { name: "Abdullah", age: 23 };
+      // alert(person.name);
+
+      // function person(Name, Age) {
+      //   this.Name = Name;
+      //   this.Age = Age;
+      // }
+      //
+      // var p = new person("Ali", 23);
+      // alert(p.Name);
+
+
+      // var Person = function (name, age) {
+      //     this.name = name;
+      //     this.age = age;
+      // }
+      //
+      // var p = new Person("Abdullah", 23);
+      // console.log(p.name);
+      // console.log(p.age);
+      // p.name = "Mohammed";
+      //
+
+      // Initialize
+      // var Person = function (name = "Abdullah", age = 18) {
+      //     this.name = name;
+      //     this.age = age;
+      // }
+
+      // var p2 = new Person();
+      // console.log(p2.name );
+
+
+      var Person = function (name = "Abdullah", age = 18) {
+          var id = 0; // Private Member
+          setId(1);
+          this.name = name;
+          this.age = age;
+
+          this.display = function () {
+            console.log("Person Name: " + this.name + "\t" + "Person Age: " + this.age);
+          }
+
+          function setId(_id) // Private Method
+          {
+            id = _id;
+          }
+
+          this.getId = function () {
+            return id;
+          }
+
+      }
+
+
+      // var p3 = new Person();
+      //
+      // p3.display();
+      //
+      // console.log(p3.getId());
+      //
+      // var p4 = new Person("Ay Haga", 32);
+
+
+      // Adding New Property to p4
+
+
+      // p4.address = "Dakahlia";
+      //
+      // console.log(p4.address); // Dakahlia
+      // console.log(p3.address); // Undefind
+
+      // Java script have no global variable
+
+      // var x;
+      // function test() {
+      //   var x; // Private variable
+      //   alert(x); // x inside function
+      //   alert(window.x); // x outside
+      //   y = 10; // window.y = 10;
+      // }
+
+      // var globalVar; // window.globalVariable
+      // alert(globalVar); // alert(window.globalVar)
+
+
+      // var p5 = new Person("Ay Haga", 39);
+
+
+      // Adding New Property to Person
+      // Person.prototype.showName = function () {
+      //   console.log("My Name: " + this.name);
+      // }
+      //
+      // Person.prototype.city = "Dakahlia";
+      //
+      // p5.showName();
+      // p3.showName();
+      // p4.showName();
+      // console.log(p5.city);
+      //
+      //
+      var Student = function (track) {
+        this.track = track;
+      }
+
+
+
+      // Student Inherit from Person
+      Student.prototype = new Person();
+      //
+      // var s = new Student("PD");
+      // s.display();
+
+
+      // Override display
+      Student.prototype.display = function () {
+        console.log("Student Name: " + this.name + "\t" + "Student Age: " + this.age + "\t"
+        + "Student track: " + this.track);
+      }
+      //
+      // s.display();
+      // console.log(typeof(s));
+
+
+
+      // Literal Notation
+      // Anonymmous object => does not Inherit
+      var course = {
+        Name: "JavaScript",
+        CriditeHours: "12",
+
+        show: function () {
+          console.log("Course Name: " + this.Name + "\t Course Hours: " + this.CriditeHours);
+        }
+      }
+
+      console.log(course.Name);
+      course.show();
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

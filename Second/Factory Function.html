@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button type="button" id="b1" name="button">Click Me</button>
+    <script>
+      // var crs1 = { name: "JS", hours: 30 };
+      // var crs2 = { name: "Advanced JS", hours: 18 };
+      //
+      // // Factory Function
+      // var course = function (_name, _hours)
+      // {
+      //   let coursObject = { name: _name, hours: _hours };
+      //   return coursObject;
+      // }
+      //
+      // var crs3 = course( "ES6", 12);
+      // var crs4 = course( "Angular", 30);
+      //
+      // console.log(crs3.name);
+
+
+
+      // Any Variable Without var is global Variable
+
+
+
+      // var outer = function () {
+      //   var x = 10;
+      //   function inner() {
+      //     var y = 10;
+      //     return x * y;
+      //   }
+      //   var res = inner();
+      //   return res;
+      // }
+      //
+      // var res = outer();
+      // console.log(res);
+
+      // Closures => take copy variables from outer function
+      var outer = function () {
+        var x = 10;
+        function inner() {
+          var y = 10;
+          return x * y;
+        }
+        return inner; // Return reference to inner function
+      }
+
+      var res = outer(); // reference to inner function
+      console.log(res());
+
+
+      function sayHello(name) {
+        var text = 'Hello ' + name; // local variable
+        var sayAlert = function () {
+          alert(text);
+        }
+        return sayAlert;
+      }
+
+      var name = prompt("Enter Your Name: ");
+      var say = sayHello(name);
+      say();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

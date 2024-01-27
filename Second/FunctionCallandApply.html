@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button type="button" id="b1" name="button">Click Me</button>
+    <script>
+
+      // Call
+
+      // function Product(name, price) {
+      //   this.name = name;
+      //   this.price = price;
+      // }
+      //
+      //
+      // function Food(name, price) {
+      //   Product.call(this, name, price);
+      //   this.category = 'food'
+      // }
+      //
+      // console.log(new Food('cheese', 5).name);
+
+      // var Person = {
+      //   firstName: "Abdullah",
+      //   lastName: "Gomaa",
+      //   fullName: function () {
+      //     return this.firstName + " " + this.lastName;
+      //   }
+      // }
+
+      // console.log(Person.fullName());
+
+
+
+
+      // var person1 = {
+      //   firstName: "Abdullah",
+      //   lastName: "Gomaa"
+      // }
+      //
+      // var person2 = {
+      //   firstName: "Ali",
+      //   lastName: "Gomaa"
+      // }
+      //
+      // console.log(Person.fullName.call(person2));
+
+
+      // var Person = {
+      //   firstName: "Abdullah",
+      //   lastName: "Gomaa",
+      //   fullName: function (city, country) {
+      //     return this.firstName + " " + this.lastName + "," + city + "," + country;
+      //   }
+      // }
+      //
+      // var person1 = {
+      //   firstName: "Abdullah",
+      //   lastName: "Gomaa"
+      // }
+      //
+      // var person2 = {
+      //   firstName: "Ali",
+      //   lastName: "Gomaa"
+      // }
+      //
+      // console.log(Person.fullName.call(person2, "Dakahlia", "Egypt"));
+
+
+      // Apply
+      var Person = {
+        fullName: function (city, country) {
+          return this.firstName + " " + this.lastName + "," + city + "," + country;
+        }
+      }
+
+      var person1 = {
+        firstName: "Abdullah",
+        lastName: "Gomaa"
+      }
+
+      var person2 = {
+        firstName: "Ali",
+        lastName: "Gomaa"
+      }
+
+      console.log(Person.fullName.apply(person1, ["Dakahlia", "Egypt"]));
+
+      const numbers = [1, 2 ,23 , 323, 22, 21223, 4, 54];
+      const max = Math.max.apply(null, numbers);
+
+      console.log(max);
+
+      const numberss = [1, 2 ,23 , 323, 22, 21223, 4, 54];
+      const min = Math.min.apply(null, numberss);
+
+      console.log(min);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

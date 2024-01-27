@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <button id="b1" type="button" name="button">Test</button>
+
+    <script>
+
+      // document.getElementById("b1").onclick = testFun;
+      // function testFun(){
+      //   console.log("Declarative Function.");
+      // }
+
+
+
+      document.getElementById("b1").onclick = function (event){
+        console.log("Declarative Function.");
+      };
+
+      // setInterval(function () {
+      //   console.log("Timer...");
+      // }, 1000)
+
+      // Arrow Function is Like Lambda Expression
+      // setInterval( () => {
+      //   console.log("Timer...");
+      // }, 1000)
+
+      // var operation = new Function("x1", "x2", "let res = x1 + x2; return res");
+      // alert(operation(10, 20));
+      // operation = new Function("x1", "x2", "let res = x1 - x2; return res");
+      // alert(operation(10, 20));
+      // operation = new Function("x1", "x2", "let res = x1 * x2; return res");
+      // alert(operation(10, 20));
+      // operation = new Function("x1", "x2", "let res = x1 / x2; return res");
+      // alert(operation(10, 20));
+
+
+
+
+      ////////////////////////////////////////////
+      // alert(Math.max(1,3,10,55,2,1));
+
+      // function getMax()
+      // {
+      //   console.log("New Call..");
+      //   console.log(arguments.length);
+      //   console.log(arguments);
+      // }
+      //
+      // getMax(1, 3);
+      //
+      // getMax(1, 3, 4);
+      //
+      // getMax(1, 3, 32, 2332,  34)
+
+      // function getMax1()
+      // {
+      //   var val = arguments[0];
+      //   for(var i = 0;i < arguments.length;i++){
+      //     if(val < arguments[i]){
+      //       val = arguments[i];
+      //     }
+      //   }
+      //   console.log(val);
+      // }
+      //
+      // getMax1(43, 234, 432, 34, 42, 343, 3432, 23);
+
+
+      // function myFunction(a, b) {
+      //   return arguments.length;
+      // }
+      // alert(myFunction.argument.lengths)
+
+
+      ///////////////////////////////////////////
+
+
+      // Self Invoking Function
+
+
+      // (function sum(n1, n2) {
+      //   alert(n1 + n2);
+      // })(10, 20);
+
+      // sum(10, 20);
+
+      // (function() {
+      //   alert("Sum");
+      // })();
+
+      
+
+
+    </script>
+  </body>
+</html>
